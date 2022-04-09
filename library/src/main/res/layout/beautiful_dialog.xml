@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/single_margin"
         android:layout_marginTop="@dimen/single_margin"
         android:layout_marginEnd="@dimen/single_margin"
-        android:layout_marginBottom="@dimen/single_margin"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/layout_rounded_white"
         android:padding="@dimen/single_and_half_margin">
 
@@ -24,7 +24,7 @@
             android:layout_width="51dp"
             android:layout_height="51dp"
             android:layout_marginTop="@dimen/single_margin"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
             android:layout_marginTop="@dimen/ten_dp"
             android:text="@string/title"
             android:textSize="24sp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,50 +54,64 @@
             android:gravity="center_horizontal"
             android:text="@string/description"
             android:textSize="14sp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <TextView
-            android:id="@+id/yesButton"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/triple_margin"
-            android:layout_marginStart="@dimen/double_margin"
-            android:layout_marginTop="@dimen/single_and_half_margin"
-            android:layout_marginEnd="@dimen/double_margin"
-            android:background="@drawable/layout_rounded_black"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingStart="@dimen/single_margin"
-            android:paddingEnd="@dimen/single_margin"
-            android:text="@string/done"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subHeading" />
-
-        <TextView
-            android:id="@+id/noButton"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/triple_margin"
-            android:layout_marginStart="@dimen/double_margin"
-            android:layout_marginTop="@dimen/half_margin"
-            android:layout_marginEnd="@dimen/double_margin"
-            android:layout_marginBottom="@dimen/single_margin"
-            android:background="@drawable/layout_rounded_black"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingStart="@dimen/single_margin"
-            android:paddingEnd="@dimen/single_margin"
-            android:text="@string/done"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/yesButton" />
+            app:layout_constraintTop_toBottomOf="@+id/subHeading">
+
+            <TextView
+                android:id="@+id/yesButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/triple_margin"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/layout_rounded_black"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/done"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/noButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/triple_margin"
+                android:layout_weight="0.5"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/layout_rounded_black"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/done"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

@@ -5,12 +5,17 @@
     android:height="50dp">
     <path
         android:pathData="M50 25A25 25 0 0 1 0 25A25 25 0 0 1 50 25Z"
-        android:fillColor="#25AE88" />
+        android:fillColor="#48A0DC" />
     <path
-        android:pathData="M38 15L22 33 12 25"
+        android:pathData="M25 37L25 39"
         android:strokeColor="#FFFFFF"
         android:strokeWidth="2"
         android:strokeLineCap="round"
-        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M18 16c0 -3.899 3.188 -7.054 7.1 -6.999c3.717 0.052 6.848 3.182 6.9 6.9c0.035 2.511 -1.252 4.723 -3.21 5.986C26.355 23.457 25 26.261 25 29.158V32"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
         android:strokeMiterLimit="10" />
 </vector>

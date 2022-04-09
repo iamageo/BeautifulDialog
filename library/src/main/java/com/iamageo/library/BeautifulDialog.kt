@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.beautiful_dialog.*
 
@@ -15,6 +16,10 @@ class BeautifulDialog {
      * */
     enum class POSITIONS {
         CENTER, BOTTOM, TOP
+    }
+
+    enum class TYPE {
+        SUCCESS, INFO, ERROR
     }
 
     companion object {
@@ -108,22 +113,27 @@ fun AlertDialog.body(
     return this
 }
 
-///***
-// * Icon of  Alert Dialog
-// * */
-//fun AlertDialog.icon(
-//    icon: Int,
-//    animateIcon: Boolean = false
-//): AlertDialog {
-//    this.image.setImageResource(icon)
-//    this.image.show()
-//    // Pulse Animation for Icon
-//    if (animateIcon) {
-//        val pulseAnimation = AnimationUtils.loadAnimation(context, R.anim.pulse)
-//        image.startAnimation(pulseAnimation)
-//    }
-//    return this
-//}
+/***
+ * Icon of  Alert Dialog
+ * */
+fun AlertDialog.type(
+    type: BeautifulDialog.TYPE
+): AlertDialog {
+    when (type) {
+        BeautifulDialog.TYPE.SUCCESS -> {
+            this.image.setImageResource(R.drawable.ic_success)
+        }
+        BeautifulDialog.TYPE.INFO -> {
+            this.image.setImageResource(R.drawable.ic_info)
+        }
+        BeautifulDialog.TYPE.ERROR -> {
+            this.image.setImageResource(R.drawable.ic_error)
+        }
+    }
+    this.image.show()
+
+    return this
+}
 
 /***
  * onPositive Button Properties For Alert Dialog
