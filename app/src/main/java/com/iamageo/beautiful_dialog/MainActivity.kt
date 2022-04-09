@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
 
         //Simple example
         BeautifulDialog.build(this)
-            .title("Example success", titleColor = R.color.black)
-            .body("Example sucess",  color = R.color.black)
+            .title("Title success", titleColor = R.color.black)
+            .body("Description success",  color = R.color.black)
             .type(type= BeautifulDialog.TYPE.SUCCESS)
             .position(BeautifulDialog.POSITIONS.CENTER)
-            .onPositive("positive button") {
-                Toast.makeText(this, "positive", Toast.LENGTH_SHORT).show()
+            .onPositive("Confirm") {
+                Toast.makeText(this, "confirm", Toast.LENGTH_SHORT).show()
             }
-            .onNegative("negative button") {
-                Toast.makeText(this, "negative", Toast.LENGTH_SHORT).show()
+            .onNegative("Cancel") {
+                Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
             }
     }
 }
