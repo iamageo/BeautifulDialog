@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Congratulations</string>
+    <string name="description">Transaction is successful</string>
+    <string name="done">Done</string>
+</resources>
