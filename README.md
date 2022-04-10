@@ -14,9 +14,9 @@
 
 ## Screenshots
 <p align="center">
-<img src="f" width="32%"/>
-<img src="f" width="32%"/>
-<img src="f" width="32%"/>
+<img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" width="30%"/>
+<img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" width="30%"/>
+<img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" width="30%"/>
 </p>
 
 ## Including in your project
@@ -56,6 +56,33 @@ BeautifulDialog.build(this)
 
 ```
 
+## Type ✔️ ℹ️ ❌
+We can customize the type of Dialog.
+```kotlin
+TYPE.SUCCESS
+TYPE.INFO
+TYPE.ERROR
+```
+By Default Position is Bottom.
+
+| SUCCESS | INFO | ERROR
+| :---------------: | :---------------: | :---------------: | 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="50%"/>
+
+
+## Positioning 📱
+We can customize the Position of Dialog.
+```kotlin
+POSITIONS.TOP
+POSITIONS.CENTER
+POSITIONS.BOTTOM
+```
+By Default Position is Bottom.
+
+| TOP | CENTER | BOTTOM
+| :---------------: | :---------------: | :---------------: | 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
+
 
 ## Beautiful Dialog Attributes
 Attributes | Type | Default | Description
@@ -63,5 +90,7 @@ Attributes | Type | Default | Description
 title | String | none | Title of you dialog. 
 description | String | none | Description of you dialog.
 position | POSITIONS.BOTTOM, POSITIONS.CENTER, POSITIONS.TOP | POSITIONS.BOTTOM | Indicates the position of the dialog.
-type | TYOE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
+type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
+onPositive | onClick | none | Button positive click.
+onNegative | onClick | none | Button negative click.
 
