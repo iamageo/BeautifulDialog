@@ -82,7 +82,7 @@ POSITIONS.BOTTOM
 ```
 By Default Position is Bottom.
 
-| TOP | CENTER | BOTTOM
+| TOP (with error) | CENTER | BOTTOM
 | :---------------: | :---------------: | :---------------: | 
 | <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
 
