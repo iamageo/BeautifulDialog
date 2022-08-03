@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
-import android.view.animation.AnimationUtils
 import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.beautiful_dialog.*
 
@@ -15,7 +14,7 @@ class BeautifulDialog {
      * Positions For Alert Dialog
      * */
     enum class POSITIONS {
-        CENTER, BOTTOM, TOP
+        CENTER, BOTTOM
     }
 
     enum class TYPE {
@@ -87,8 +86,6 @@ fun AlertDialog.position(
         layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE)
     } else if (position == BeautifulDialog.POSITIONS.BOTTOM) {
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE)
-    } else if (position == BeautifulDialog.POSITIONS.TOP) {
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE)
     }
     mainLayout!!.layoutParams = layoutParams
     return this
