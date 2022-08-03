@@ -1,14 +1,14 @@
-<h1 align="center">Beautiful Dialog</h1></br>
+<h1 align="center">Beautiful Dialog</h1><br/>
 <p align="center"> 
 🗨️ Beautiful Dialog is a Simple and Beautiful custom dialog.
 </p>
-</br>
+<br/>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
   <img alt="repo size" src="https://img.shields.io/github/repo-size/iamageo/beautiful-dialog"/>
-  </br>
+  <br/>
     <img alt="forks" src="https://img.shields.io/github/forks/iamageo/beautiful-dialog?style=social"/>
     <img alt="stars" src="https://img.shields.io/github/stars/iamageo/beautiful-dialog?style=social"/>
 
@@ -76,15 +76,14 @@ By Default Position is Bottom.
 ## Positioning 📱
 We can customize the Position of Dialog.
 ```kotlin
-POSITIONS.TOP
 POSITIONS.CENTER
 POSITIONS.BOTTOM
 ```
 By Default Position is Bottom.
 
-| TOP (with error) | CENTER | BOTTOM
-| :---------------: | :---------------: | :---------------: | 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
+| CENTER | BOTTOM
+| :---------------: | :---------------: | 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
 
 
 ## Beautiful Dialog Attributes
@@ -92,7 +91,7 @@ Attributes | Type | Default | Description
 --- | --- | --- | ---
 title | String | none | Title of you dialog. 
 description | String | none | Description of you dialog.
-position | POSITIONS.BOTTOM, POSITIONS.CENTER, POSITIONS.TOP | POSITIONS.BOTTOM | Indicates the position of the dialog.
+position | POSITIONS.BOTTOM, POSITIONS.CENTER | POSITIONS.BOTTOM | Indicates the position of the dialog.
 type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
