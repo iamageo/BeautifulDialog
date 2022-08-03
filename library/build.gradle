@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.github.iamageo'
-version = '1.0.0'
+version = '1.0.1'
 
 android {
     compileSdk 31
@@ -49,7 +49,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.iamageo'
                 artifactId = 'beautiful-dialog'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }
