@@ -4,8 +4,8 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.graphics.Typeface
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import kotlinx.android.synthetic.main.beautiful_dialog.*
 
 class BeautifulDialog {
@@ -17,6 +17,9 @@ class BeautifulDialog {
         CENTER, BOTTOM
     }
 
+    /***
+     * Types For Alert Dialog
+     * */
     enum class TYPE {
         SUCCESS, INFO, ERROR
     }
@@ -184,6 +187,25 @@ fun AlertDialog.onNegative(
     return this
 }
 
-private fun View.show() {
-    this.visibility = View.VISIBLE
+/***
+ * cancelNegativeButton defines if the cancel button should be displayed
+ * */
+fun AlertDialog.hideNegativeButton(
+    hide: Boolean = false
+): AlertDialog {
+    if (hide) {
+        this.noButton.hide()
+        val constraintSet = ConstraintSet()
+
+        constraintSet.clone(this.mainLayoutButtons)
+        constraintSet.connect(
+            R.id.yesButton,
+            ConstraintSet.START,
+            R.id.mainLayoutButtons,
+            ConstraintSet.START,
+            0
+        );
+        constraintSet.applyTo(this.mainLayoutButtons)
+    }
+    return this
 }
