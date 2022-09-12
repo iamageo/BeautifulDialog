@@ -56,7 +56,12 @@ BeautifulDialog.build(this)
     .onNegative("Cancel") {
         Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
     }
+```
 
+## How to hide Negative Button
+just call in build:
+```kotlin
+.hideNegativeButton(hide = true)
 ```
 
 ## Type ✔️ ℹ️ ❌
@@ -95,6 +100,7 @@ position | POSITIONS.BOTTOM, POSITIONS.CENTER | POSITIONS.BOTTOM | Indicates the
 type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
+hideNegativeButton | Boolean | false | hide negative button.
 
 ## License
 ```
