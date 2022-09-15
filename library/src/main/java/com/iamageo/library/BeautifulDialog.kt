@@ -97,12 +97,12 @@ fun AlertDialog.position(
 /***
  * Sub Title or Body of Alert Dialog
  * */
-fun AlertDialog.body(
-    body: String,
+fun AlertDialog.description(
+    description: String,
     fontStyle: Typeface? = null,
     color: Int = 0
 ): AlertDialog {
-    this.subHeading.text = body.trim()
+    this.subHeading.text = description.trim()
     this.subHeading.show()
     if (fontStyle != null) {
         this.subHeading.typeface = fontStyle

@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         //Simple example
         BeautifulDialog.build(this)
             .title("Title success", titleColor = R.color.black)
-            .body("Description success", color = R.color.black)
+            .description("Description success", color = R.color.black)
             .type(type = BeautifulDialog.TYPE.SUCCESS)
             .position(BeautifulDialog.POSITIONS.CENTER)
             .onPositive("Confirm") {
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             .onNegative("Cancel") {
                 Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
             }
-            .hideNegativeButton(hide = true)
+            .hideNegativeButton(hide = false)
+            .setCancelable(true)
     }
 }
