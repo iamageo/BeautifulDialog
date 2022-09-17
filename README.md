@@ -64,6 +64,12 @@ just call in build:
 .hideNegativeButton(hide = true)
 ```
 
+## How to set cancelable (❌ in development, wait for the next version)
+just call in build:
+```kotlin
+.cancelable(isCancelable = true)
+```
+
 ## Type ✔️ ℹ️ ❌
 We can customize the type of Dialog.
 ```kotlin
@@ -101,7 +107,7 @@ type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type,
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
 hideNegativeButton | Boolean | false | hide negative button.
-
+cancelable | Boolean | false | set if Beautiful is cancelable on click in screen
 ## License
 ```
 
