@@ -64,6 +64,12 @@ just call in build:
 .hideNegativeButton(hide = true)
 ```
 
+## How to set cancelable (❌ in development, wait for the next version)
+just call in build:
+```kotlin
+.cancelable(isCancelable = true)
+```
+
 ## Type ✔️ ℹ️ ❌
 We can customize the type of Dialog.
 ```kotlin
@@ -90,6 +96,8 @@ By Default Position is Bottom.
 | :---------------: | :---------------: | 
 | <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
 
+## Hacktoberfest 2022
+This project has been submitted for hacktoberfest 2022. [See more here](https://hacktoberfest.com/)
 
 ## Beautiful Dialog Attributes
 Attributes | Type | Default | Description
@@ -101,7 +109,7 @@ type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type,
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
 hideNegativeButton | Boolean | false | hide negative button.
-
+cancelable | Boolean | false | set if Beautiful is cancelable on click in screen
 ## License
 ```
 
