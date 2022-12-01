@@ -144,7 +144,8 @@ fun AlertDialog.onPositive(
     text: String,
     buttonBackgroundColor: Int? = null,
     textColor: Int? = null,
-    action: (() -> Unit)? = null
+    shouldIDismissOnClick: Boolean = true,
+    action: (() -> Unit)? = null,
 ): AlertDialog {
     this.yesButton.show()
     if (buttonBackgroundColor != null) {
@@ -156,7 +157,7 @@ fun AlertDialog.onPositive(
     this.yesButton.text = text.trim()
     this.yesButton.setOnClickListener {
         action?.invoke()
-        dismiss()
+        if(shouldIDismissOnClick) dismiss()
     }
     return this
 }
@@ -170,6 +171,7 @@ fun AlertDialog.onNegative(
     text: String,
     buttonBackgroundColor: Int? = null,
     textColor: Int? = null,
+    shouldIDismissOnClick: Boolean = true,
     action: (() -> Unit)? = null
 ): AlertDialog {
     this.noButton.show()
@@ -182,7 +184,7 @@ fun AlertDialog.onNegative(
     }
     this.noButton.setOnClickListener {
         action?.invoke()
-        dismiss()
+        if(shouldIDismissOnClick) dismiss()
     }
     return this
 }
