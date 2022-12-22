@@ -50,10 +50,10 @@ BeautifulDialog.build(this)
     .body("Description success",  color = R.color.black)
     .type(type= BeautifulDialog.TYPE.SUCCESS)
     .position(BeautifulDialog.POSITIONS.CENTER)
-    .onPositive("Confirm") {
+    .onPositive(text = "Confirm", shouldIDismissOnClick = false) {
         Toast.makeText(this, "confirm", Toast.LENGTH_SHORT).show()
     }
-    .onNegative("Cancel") {
+    .onNegative(text = "Cancel") {
         Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
     }
 ```
@@ -64,10 +64,12 @@ just call in build:
 .hideNegativeButton(hide = true)
 ```
 
-## How to set cancelable (❌ in development, wait for the next version)
-just call in build:
+## how not to cancel dialog on click
+just call property shouldIDismissOnClick in onPositive or onNegative:
 ```kotlin
-.cancelable(isCancelable = true)
+.onPositive(text = "Confirm", shouldIDismissOnClick = false) {
+        Toast.makeText(this, "click in positive button", Toast.LENGTH_SHORT).show()
+}
 ```
 
 ## Type ✔️ ℹ️ ❌
