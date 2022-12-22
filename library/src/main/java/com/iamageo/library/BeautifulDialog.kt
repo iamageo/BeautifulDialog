@@ -21,7 +21,7 @@ class BeautifulDialog {
      * Types For Alert Dialog
      * */
     enum class TYPE {
-        SUCCESS, INFO, ERROR
+        SUCCESS, INFO, ALERT, ERROR
     }
 
     companion object {
@@ -125,6 +125,9 @@ fun AlertDialog.type(
         }
         BeautifulDialog.TYPE.INFO -> {
             this.image.setImageResource(R.drawable.ic_info)
+        }
+        BeautifulDialog.TYPE.ALERT -> {
+             this.image.setImageResource(R.drawable.ic_alert)
         }
         BeautifulDialog.TYPE.ERROR -> {
             this.image.setImageResource(R.drawable.ic_error)

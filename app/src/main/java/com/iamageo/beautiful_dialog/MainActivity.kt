@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         BeautifulDialog.build(this)
             .title("Title success", titleColor = R.color.black)
             .description("Description success", color = R.color.black)
-            .type(type = BeautifulDialog.TYPE.SUCCESS)
+            .type(type = BeautifulDialog.TYPE.ALERT)
             .position(BeautifulDialog.POSITIONS.CENTER)
             .onPositive("Confirm", shouldIDismissOnClick = false) {
                 Toast.makeText(this, "confirm", Toast.LENGTH_SHORT).show()
