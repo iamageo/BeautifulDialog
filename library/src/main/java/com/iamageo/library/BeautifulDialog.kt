@@ -3,6 +3,7 @@ package com.iamageo.library
 import android.app.Activity
 import android.app.AlertDialog
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -77,6 +78,28 @@ fun AlertDialog.background(
     }
     return this
 }
+
+/***
+ * Dialog icon [resId] property for Alert Dialog
+ */
+fun AlertDialog.dialogIcon(
+    resId: Int
+) : AlertDialog {
+    this.image.setImageResource(resId)
+    return this
+}
+
+
+/***
+ * Dialog icon [drawable] property for Alert Dialog
+ */
+fun AlertDialog.dialogIcon(
+    icon: Drawable
+) : AlertDialog {
+    this.image.setImageDrawable(icon)
+    return this
+}
+
 
 /***
  * Positions of Alert Dialog

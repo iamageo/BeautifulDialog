@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         BeautifulDialog.build(this)
             .title("Title success", titleColor = R.color.black)
             .description("Description success", color = R.color.black)
-            .type(type = BeautifulDialog.TYPE.ALERT)
+            .dialogIcon(com.iamageo.library.R.drawable.ic_info)
             .position(BeautifulDialog.POSITIONS.CENTER)
             .onPositive("Confirm", shouldIDismissOnClick = false) {
                 Toast.makeText(this, "confirm", Toast.LENGTH_SHORT).show()
@@ -23,6 +23,5 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
             }
             .hideNegativeButton(hide = false)
-            .setCancelable(true)
     }
 }
