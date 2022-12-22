@@ -63,8 +63,15 @@ just call in build:
 ```kotlin
 .hideNegativeButton(hide = true)
 ```
+## How to change icon 📌
+📌 Note: your icon can be of type iconRes or drawable
 
-## how not to cancel dialog on click
+if you call .dialogRes() don't call .type()
+```kotlin
+.dialogIcon(iconRes)
+```
+
+## how not to cancel dialog on click ❌
 just call property shouldIDismissOnClick in onPositive or onNegative:
 ```kotlin
 .onPositive(text = "Confirm", shouldIDismissOnClick = false) {
@@ -72,11 +79,12 @@ just call property shouldIDismissOnClick in onPositive or onNegative:
 }
 ```
 
-## Type ✔️ ℹ️ ❌
+## Type ✔️ ℹ️ ⚠ ❌
 We can customize the type of Dialog.
 ```kotlin
 TYPE.SUCCESS
 TYPE.INFO
+TYPE.ALERT
 TYPE.ERROR
 ```
 By Default Position is Bottom.
@@ -107,11 +115,13 @@ Attributes | Type | Default | Description
 title | String | none | Title of you dialog. 
 description | String | none | Description of you dialog.
 position | POSITIONS.BOTTOM, POSITIONS.CENTER | POSITIONS.BOTTOM | Indicates the position of the dialog.
-type | TYPE.SUCCESS, TYPE.INFO or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
+type | TYPE.SUCCESS, TYPE.INFO, TYPE.ALERT or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
 hideNegativeButton | Boolean | false | hide negative button.
-cancelable | Boolean | false | set if Beautiful is cancelable on click in screen
+cancelable | Boolean | false | set if Beautiful is cancelable on click in screen ❌
+shouldIDismissOnClick | boolean | true | set if dialog dismiss on click in onPositive or onNegative
+dialogIcon | Int, drawable | none | set dialog icon
 ## License
 ```
 
