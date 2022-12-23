@@ -23,7 +23,7 @@
 </p>
 
 ## Including in your project
-[![](https://jitpack.io/v/iamageo/beautiful-dialog.svg)](https://jitpack.io/#iamageo/beautiful-dialog)
+[![](https://jitpack.io/v/iamageo/BeautifulDialog.svg)](https://jitpack.io/#iamageo/BeautifulDialog)
 ### Gradle 
 Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
 ```gradle
