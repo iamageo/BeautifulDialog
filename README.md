@@ -89,9 +89,9 @@ TYPE.ERROR
 ```
 By Default Position is Bottom.
 
-| SUCCESS | INFO | ERROR
-| :---------------: | :---------------: | :---------------: | 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="50%"/>
+| SUCCESS | INFO | ALERT | ERROR |
+| :---------------: | :---------------: | :---------------: | :---------------: | 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="70%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="70%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="70%"/> |  <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="70%"/>
 
 
 ## Positioning 📱
