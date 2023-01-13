@@ -20,7 +20,5 @@ jobs:
           cache: gradle
       - name: setup gradle
         uses: gradle/gradle-build-action@v2
-      - name: build app
-        run: ./gradlew assemble
       - name: unit tests
         run: ./gradlew testDebugUnitTest
