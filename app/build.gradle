@@ -39,4 +39,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     implementation project(path: ':library')
+    testImplementation 'junit:junit:4.13.2'
 }
