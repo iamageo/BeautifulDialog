@@ -100,7 +100,7 @@ We can customize the Position of Dialog.
 POSITIONS.CENTER
 POSITIONS.BOTTOM
 ```
-By Default Position is Bottom.
+By default, the Position is **Bottom**.
 
 | CENTER | BOTTOM
 | :---------------: | :---------------: | 
