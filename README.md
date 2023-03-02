@@ -26,8 +26,12 @@
 <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" width="30%"/>
 </p>
 
+## Star history 🌟
+[![Star History Chart](https://api.star-history.com/svg?repos=iamageo/BeautifulDialog&type=Timeline)](https://star-history.com/#iamageo/BeautifulDialog&Timeline)
+
 ## Including in your project
 [![](https://jitpack.io/v/iamageo/BeautifulDialog.svg)](https://jitpack.io/#iamageo/BeautifulDialog)
+
 ### Gradle 
 Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
 ```gradle
