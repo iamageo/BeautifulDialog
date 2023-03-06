@@ -1,5 +1,6 @@
 package com.iamageo.library
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.graphics.Typeface
@@ -7,7 +8,8 @@ import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintSet
-import kotlinx.android.synthetic.main.beautiful_dialog.*
+import com.iamageo.library.BeautifulDialog.Companion.binding
+import com.iamageo.library.databinding.BeautifulDialogBinding
 
 class BeautifulDialog {
 
@@ -27,7 +29,8 @@ class BeautifulDialog {
 
     companion object {
 
-        private lateinit var layoutInflater: LayoutInflater
+        @SuppressLint("StaticFieldLeak")
+        lateinit var binding: BeautifulDialogBinding
 
         /***
          * core method For Alert Dialog
@@ -35,12 +38,12 @@ class BeautifulDialog {
         fun build(
             context: Activity
         ): AlertDialog {
-            layoutInflater = LayoutInflater.from(context)
+            binding = BeautifulDialogBinding.inflate(LayoutInflater.from(context))
             val alertDialog =
                 AlertDialog.Builder(
                     context, R.style.beautiful_dialog
                 )
-                    .setView(R.layout.beautiful_dialog)
+                    .setView(binding.root)
             val alert: AlertDialog = alertDialog.create()
             alert.show()
             return alert
@@ -56,14 +59,14 @@ fun AlertDialog.title(
     fontStyle: Typeface? = null,
     titleColor: Int = 0
 ): AlertDialog {
-    this.title.text = title.trim()
+    binding.title.text = title.trim()
     if (fontStyle != null) {
-        this.title.typeface = fontStyle
+        binding.title.typeface = fontStyle
     }
     if (titleColor != 0) {
-        this.title.setTextColor(titleColor)
+        binding.title.setTextColor(titleColor)
     }
-    this.title.show()
+    binding.title.show()
     return this
 }
 
@@ -74,7 +77,7 @@ fun AlertDialog.background(
     dialogBackgroundColor: Int? = null
 ): AlertDialog {
     if (dialogBackgroundColor != null) {
-        this.mainLayout.setBackgroundResource(dialogBackgroundColor)
+        binding.mainLayout.setBackgroundResource(dialogBackgroundColor)
     }
     return this
 }
@@ -85,7 +88,7 @@ fun AlertDialog.background(
 fun AlertDialog.dialogIcon(
     resId: Int
 ) : AlertDialog {
-    this.image.setImageResource(resId)
+    binding.image.setImageResource(resId)
     return this
 }
 
@@ -96,7 +99,7 @@ fun AlertDialog.dialogIcon(
 fun AlertDialog.dialogIcon(
     icon: Drawable
 ) : AlertDialog {
-    this.image.setImageDrawable(icon)
+    binding.image.setImageDrawable(icon)
     return this
 }
 
@@ -107,13 +110,13 @@ fun AlertDialog.dialogIcon(
 fun AlertDialog.position(
     position: BeautifulDialog.POSITIONS = BeautifulDialog.POSITIONS.BOTTOM
 ): AlertDialog {
-    val layoutParams = mainLayout.layoutParams as RelativeLayout.LayoutParams
+    val layoutParams = binding.mainLayout.layoutParams as RelativeLayout.LayoutParams
     if (position == BeautifulDialog.POSITIONS.CENTER) {
         layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE)
     } else if (position == BeautifulDialog.POSITIONS.BOTTOM) {
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE)
     }
-    mainLayout!!.layoutParams = layoutParams
+    binding.mainLayout.layoutParams = layoutParams
     return this
 }
 
@@ -125,13 +128,13 @@ fun AlertDialog.description(
     fontStyle: Typeface? = null,
     color: Int = 0
 ): AlertDialog {
-    this.subHeading.text = description.trim()
-    this.subHeading.show()
+    binding.subHeading.text = description.trim()
+    binding.subHeading.show()
     if (fontStyle != null) {
-        this.subHeading.typeface = fontStyle
+        binding.subHeading.typeface = fontStyle
     }
     if (color != 0) {
-        this.subHeading.setTextColor(color)
+        binding.subHeading.setTextColor(color)
     }
     return this
 }
@@ -144,19 +147,19 @@ fun AlertDialog.type(
 ): AlertDialog {
     when (type) {
         BeautifulDialog.TYPE.SUCCESS -> {
-            this.image.setImageResource(R.drawable.ic_success)
+            binding.image.setImageResource(R.drawable.ic_success)
         }
         BeautifulDialog.TYPE.INFO -> {
-            this.image.setImageResource(R.drawable.ic_info)
+            binding.image.setImageResource(R.drawable.ic_info)
         }
         BeautifulDialog.TYPE.ALERT -> {
-             this.image.setImageResource(R.drawable.ic_alert)
+             binding.image.setImageResource(R.drawable.ic_alert)
         }
         BeautifulDialog.TYPE.ERROR -> {
-            this.image.setImageResource(R.drawable.ic_error)
+            binding.image.setImageResource(R.drawable.ic_error)
         }
     }
-    this.image.show()
+    binding.image.show()
 
     return this
 }
@@ -173,15 +176,15 @@ fun AlertDialog.onPositive(
     shouldIDismissOnClick: Boolean = true,
     action: (() -> Unit)? = null,
 ): AlertDialog {
-    this.yesButton.show()
+    binding.yesButton.show()
     if (buttonBackgroundColor != null) {
-        this.yesButton.setBackgroundResource(buttonBackgroundColor)
+        binding.yesButton.setBackgroundResource(buttonBackgroundColor)
     }
     if (textColor != null) {
-        this.yesButton.setTextColor(textColor)
+        binding.yesButton.setTextColor(textColor)
     }
-    this.yesButton.text = text.trim()
-    this.yesButton.setOnClickListener {
+    binding.yesButton.text = text.trim()
+    binding.yesButton.setOnClickListener {
         action?.invoke()
         if(shouldIDismissOnClick) dismiss()
     }
@@ -200,15 +203,15 @@ fun AlertDialog.onNegative(
     shouldIDismissOnClick: Boolean = true,
     action: (() -> Unit)? = null
 ): AlertDialog {
-    this.noButton.show()
-    this.noButton.text = text.trim()
+    binding.noButton.show()
+    binding.noButton.text = text.trim()
     if (textColor != null) {
-        this.noButton.setTextColor(textColor)
+        binding.noButton.setTextColor(textColor)
     }
     if (buttonBackgroundColor != null) {
-        this.noButton.setBackgroundResource(buttonBackgroundColor)
+        binding.noButton.setBackgroundResource(buttonBackgroundColor)
     }
-    this.noButton.setOnClickListener {
+    binding.noButton.setOnClickListener {
         action?.invoke()
         if(shouldIDismissOnClick) dismiss()
     }
@@ -222,10 +225,10 @@ fun AlertDialog.hideNegativeButton(
     hide: Boolean = false
 ): AlertDialog {
     if (hide) {
-        this.noButton.hide()
+        binding.noButton.hide()
         val constraintSet = ConstraintSet()
 
-        constraintSet.clone(this.mainLayoutButtons)
+        constraintSet.clone(binding.mainLayoutButtons)
         constraintSet.connect(
             R.id.yesButton,
             ConstraintSet.START,
@@ -233,7 +236,7 @@ fun AlertDialog.hideNegativeButton(
             ConstraintSet.START,
             0
         );
-        constraintSet.applyTo(this.mainLayoutButtons)
+        constraintSet.applyTo(binding.mainLayoutButtons)
     }
     return this
 }
