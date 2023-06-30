@@ -171,12 +171,16 @@ fun AlertDialog.type(
  * */
 fun AlertDialog.onPositive(
     text: String,
+    fontStyle: Typeface? = null,
     buttonBackgroundColor: Int? = null,
     textColor: Int? = null,
     shouldIDismissOnClick: Boolean = true,
     action: (() -> Unit)? = null,
 ): AlertDialog {
     binding.yesButton.show()
+    if (fontStyle != null) {
+        binding.yesButton.typeface = fontStyle
+    }
     if (buttonBackgroundColor != null) {
         binding.yesButton.setBackgroundResource(buttonBackgroundColor)
     }
@@ -198,6 +202,7 @@ fun AlertDialog.onPositive(
  * */
 fun AlertDialog.onNegative(
     text: String,
+    fontStyle: Typeface? = null,
     buttonBackgroundColor: Int? = null,
     textColor: Int? = null,
     shouldIDismissOnClick: Boolean = true,
@@ -207,6 +212,9 @@ fun AlertDialog.onNegative(
     binding.noButton.text = text.trim()
     if (textColor != null) {
         binding.noButton.setTextColor(textColor)
+    }
+    if (fontStyle != null) {
+        binding.noButton.typeface = fontStyle
     }
     if (buttonBackgroundColor != null) {
         binding.noButton.setBackgroundResource(buttonBackgroundColor)
