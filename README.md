@@ -45,7 +45,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-        implementation 'com.github.iamageo:beautiful-dialog:Tag'
+        implementation 'com.github.iamageo:beautiful-dialog:{LASTEST-VERSION}'
 }
 ```
 
