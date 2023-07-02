@@ -85,24 +85,12 @@ fun AlertDialog.background(
 /***
  * Dialog icon [resId] property for Alert Dialog
  */
-fun AlertDialog.dialogIcon(
+fun AlertDialog.dialogAnimation(
     resId: Int
 ) : AlertDialog {
-    binding.image.setImageResource(resId)
+    binding.dialogAnimation.setAnimation(resId)
     return this
 }
-
-
-/***
- * Dialog icon [drawable] property for Alert Dialog
- */
-fun AlertDialog.dialogIcon(
-    icon: Drawable
-) : AlertDialog {
-    binding.image.setImageDrawable(icon)
-    return this
-}
-
 
 /***
  * Positions of Alert Dialog
@@ -147,19 +135,19 @@ fun AlertDialog.type(
 ): AlertDialog {
     when (type) {
         BeautifulDialog.TYPE.SUCCESS -> {
-            binding.image.setImageResource(R.drawable.ic_success)
+            binding.dialogAnimation.setAnimation(R.raw.success)
         }
         BeautifulDialog.TYPE.INFO -> {
-            binding.image.setImageResource(R.drawable.ic_info)
+            binding.dialogAnimation.setAnimation(R.raw.info)
         }
         BeautifulDialog.TYPE.ALERT -> {
-             binding.image.setImageResource(R.drawable.ic_alert)
+             binding.dialogAnimation.setAnimation(R.raw.alert)
         }
         BeautifulDialog.TYPE.ERROR -> {
-            binding.image.setImageResource(R.drawable.ic_error)
+            binding.dialogAnimation.setAnimation(R.raw.error)
         }
     }
-    binding.image.show()
+    binding.dialogAnimation.show()
 
     return this
 }
