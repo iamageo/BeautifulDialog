@@ -71,12 +71,12 @@ just call in build:
 ```kotlin
 .hideNegativeButton(hide = true)
 ```
-## How to change icon 📌
-📌 Note: your icon can be of type iconRes or drawable
+## How to change animation 📌
+📌 Note: your icon can be of type iconRes (Int)
 
-if you call .dialogRes() don't call .type()
+if you call .dialogAnimation() don't call .type()
 ```kotlin
-.dialogIcon(iconRes)
+.dialogAnimation(iconRes)
 ```
 
 ## how not to cancel dialog on click ❌
