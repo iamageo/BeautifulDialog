@@ -56,7 +56,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.iamageo'
                 artifactId = 'beautiful-dialog'
-                version = '1.0.4'
+                version = '1.0.6'
             }
         }
     }
