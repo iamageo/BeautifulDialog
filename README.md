@@ -45,7 +45,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-        implementation 'com.github.iamageo:beautiful-dialog:{LASTEST-VERSION}'
+        implementation 'com.github.iamageo:beautiful-dialog:1.0.6'
 }
 ```
 
@@ -127,13 +127,11 @@ type | TYPE.SUCCESS, TYPE.INFO, TYPE.ALERT or TYPE.ERROR | none | Indicates the 
 onPositive | onClick | none | Button positive click.
 onNegative | onClick | none | Button negative click.
 hideNegativeButton | Boolean | false | hide negative button.
-cancelable | Boolean | false | set if Beautiful is cancelable on click in screen ❌
-shouldIDismissOnClick | boolean | true | set if dialog dismiss on click in onPositive or onNegative
-dialogIcon | Int, drawable | none | set dialog icon
+cancelable | Boolean | false | set if Beautiful is cancelable on click in screen ❌.
+shouldIDismissOnClick | boolean | true | set if dialog dismiss on click in onPositive or onNegative.
+dialogIcon | Int, drawable | none | set dialog icon.
 ## License
 ```
-
-
     Copyright 2022 Geovani Amaral
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -147,6 +145,5 @@ dialogIcon | Int, drawable | none | set dialog icon
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
 ```
 
