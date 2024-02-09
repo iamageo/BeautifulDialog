@@ -42,6 +42,17 @@ allprojects {
   }
 }
 ```
+For Ktx
+```gradle
+allprojects {
+  repositories {
+    ...
+     maven { url = uri("https://www.jitpack.io" ) }
+  }
+}
+```
+
+
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
@@ -55,7 +66,7 @@ Add in you Activity file.
 ```kotlin
 BeautifulDialog.build(this)
     .title("Title success", titleColor = R.color.black)
-    .body("Description success",  color = R.color.black)
+    .description("Description success",  color = R.color.black)
     .type(type= BeautifulDialog.TYPE.SUCCESS)
     .position(BeautifulDialog.POSITIONS.CENTER)
     .onPositive(text = "Confirm", shouldIDismissOnClick = false) {
@@ -94,13 +105,13 @@ TYPE.SUCCESS
 TYPE.INFO
 TYPE.ALERT
 TYPE.ERROR
+TYPE.NONE
 ```
 By Default Position is Bottom.
 
-| SUCCESS | INFO | ALERT | ERROR |
-| :---------------: | :---------------: | :---------------: | :---------------: | 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="70%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="70%"/> | |  <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="70%"/>
-
+|                                                                    SUCCESS                                                                    |                                                                     INFO                                                                      | ALERT |                                                                     ERROR                                                                     |
+|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="70%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="70%"/> |       | <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="70%"/> |
 
 ## Positioning 📱
 We can customize the Position of Dialog.
@@ -110,26 +121,45 @@ POSITIONS.BOTTOM
 ```
 By default, the Position is **Bottom**.
 
-| CENTER | BOTTOM
-| :---------------: | :---------------: | 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/>
+|                                                                    CENTER                                                                     |                                                                    BOTTOM                                                                     |
+|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/> |
 
 ## Hacktoberfest 2022
 This project has been submitted for hacktoberfest 2022. [See more here](https://hacktoberfest.com/)
 
 ## Beautiful Dialog Attributes
-Attributes | Type | Default | Description
---- | --- | --- | ---
-title | String | none | Title of you dialog. 
-description | String | none | Description of you dialog.
-position | POSITIONS.BOTTOM, POSITIONS.CENTER | POSITIONS.BOTTOM | Indicates the position of the dialog.
-type | TYPE.SUCCESS, TYPE.INFO, TYPE.ALERT or TYPE.ERROR | none | Indicates the dialog type, each type contains an icon.
-onPositive | onClick | none | Button positive click.
-onNegative | onClick | none | Button negative click.
-hideNegativeButton | Boolean | false | hide negative button.
-cancelable | Boolean | false | set if Beautiful is cancelable on click in screen ❌.
-shouldIDismissOnClick | boolean | true | set if dialog dismiss on click in onPositive or onNegative.
-dialogIcon | Int, drawable | none | set dialog icon.
+| Attributes            | Type                                                         | Default          | Description                                                 |
+|-----------------------|--------------------------------------------------------------|------------------|-------------------------------------------------------------|
+| title                 | String                                                       | none             | Title of you dialog.                                        |
+| description           | String                                                       | none             | Description of you dialog.                                  |
+| position              | POSITIONS.BOTTOM, POSITIONS.CENTER                           | POSITIONS.BOTTOM | Indicates the position of the dialog.                       |
+| type                  | TYPE.SUCCESS, TYPE.INFO, TYPE.ALERT, TYPE.ERROR or TYPE.NONE | success          | Indicates the dialog type, each type contains an icon.      |
+| onPositive            | onClick                                                      | none             | Button positive click.                                      |
+| onNegative            | onClick                                                      | none             | Button negative click.                                      |
+| hideNegativeButton    | Boolean                                                      | false            | hide negative button.                                       |
+| cancelable            | Boolean                                                      | false            | set if Beautiful is cancelable on click in screen ❌.        |
+| shouldIDismissOnClick | boolean                                                      | true             | set if dialog dismiss on click in onPositive or onNegative. |
+| dialogIcon            | Int, drawable                                                | none             | set dialog icon.                                            |
+
+## Attributes of Positive and Negative Buttons
+| Attributes            | Type     | Default | Description                   |
+|-----------------------|----------|---------|-------------------------------|
+| text                  | String   | none    | Text of button                |
+| fontStyle             | typeface | default | Fontstyle of button           |
+| buttonBackroundColor  | Int      | black   | Backround resource of button  |
+| textColor             | Int      | gray    | Text color of button          |
+| shouldIDismissOnClick | Boolean  | none    | Cancel dialog onclick if true |
+| action                | Unit     | none    | what to do                    |
+
+## Attributes of Title And Description
+| Attributes | Type     | Default | Description      |
+|------------|----------|---------|------------------|
+| text       | String   | none    | Text             |
+| fontStyle  | typeface | default | Fontstyle        |
+| fontSize   | Int      | 14      | Change font size |
+| color      | Int      | gray    | Text Color       |
+
 ## License
 ```
     Copyright 2022 Geovani Amaral
