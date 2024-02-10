@@ -4,4 +4,5 @@
     <string name="info_dialog">Info dialog</string>
     <string name="alert_dialog">Alert dialog</string>
     <string name="error_dialog">Error dialog</string>
+    <string name="none_dialog">None Dialog</string>
 </resources>

@@ -20,7 +20,6 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/dialogAnimation"
-            app:lottie_fileName="@raw/success"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             android:layout_width="70dp"
@@ -118,3 +117,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
+    <!--            app:lottie_fileName="@raw/success"-->

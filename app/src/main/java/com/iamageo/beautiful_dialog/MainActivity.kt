@@ -82,5 +82,21 @@ class MainActivity : AppCompatActivity() {
                 .hideNegativeButton(hide = false)
         }
 
+
+        binding.btnNone.setOnClickListener {
+            BeautifulDialog.build(this)
+                .title("Title alert", titleColor = R.color.black)
+                .description("Description alert", color = R.color.black)
+                .position(BeautifulDialog.POSITIONS.CENTER)
+                .type(BeautifulDialog.TYPE.NONE)
+                .onPositive("Confirm", shouldIDismissOnClick = false) {
+                    Toast.makeText(this, "confirm", Toast.LENGTH_SHORT).show()
+                }
+                .onNegative("Cancel") {
+                    Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
+                }
+                .hideNegativeButton(hide = false)
+        }
+
     }
 }

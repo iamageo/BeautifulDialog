@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.graphics.Typeface
-import android.graphics.drawable.Drawable
+import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.view.isVisible
 import com.iamageo.library.BeautifulDialog.Companion.binding
 import com.iamageo.library.databinding.BeautifulDialogBinding
 
@@ -24,7 +26,7 @@ class BeautifulDialog {
      * Types For Alert Dialog
      * */
     enum class TYPE {
-        SUCCESS, INFO, ALERT, ERROR
+        SUCCESS, INFO, ALERT, ERROR, NONE
     }
 
     companion object {
@@ -57,11 +59,15 @@ class BeautifulDialog {
 fun AlertDialog.title(
     title: String,
     fontStyle: Typeface? = null,
+    fontSize: Int = 0,
     titleColor: Int = 0
 ): AlertDialog {
     binding.title.text = title.trim()
     if (fontStyle != null) {
         binding.title.typeface = fontStyle
+    }
+    if (fontSize != 0) {
+        binding.subHeading.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
     }
     if (titleColor != 0) {
         binding.title.setTextColor(titleColor)
@@ -114,12 +120,16 @@ fun AlertDialog.position(
 fun AlertDialog.description(
     description: String,
     fontStyle: Typeface? = null,
+    fontSize: Int = 0,
     color: Int = 0
 ): AlertDialog {
     binding.subHeading.text = description.trim()
     binding.subHeading.show()
     if (fontStyle != null) {
         binding.subHeading.typeface = fontStyle
+    }
+    if (fontSize != 0) {
+        binding.subHeading.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
     }
     if (color != 0) {
         binding.subHeading.setTextColor(color)
@@ -145,6 +155,11 @@ fun AlertDialog.type(
         }
         BeautifulDialog.TYPE.ERROR -> {
             binding.dialogAnimation.setAnimation(R.raw.error)
+        }
+        BeautifulDialog.TYPE.NONE -> {
+            binding.dialogAnimation.hide()
+            binding.dialogAnimation.layoutParams.height=0
+
         }
     }
     binding.dialogAnimation.show()

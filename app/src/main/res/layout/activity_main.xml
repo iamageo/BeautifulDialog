@@ -47,6 +47,14 @@
             android:layout_marginTop="16dp"
             android:text="@string/error_dialog" />
 
+        <Button
+            android:id="@+id/btnNone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/none_dialog" />
+
 
     </LinearLayout>
 
