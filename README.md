@@ -56,7 +56,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-        implementation 'com.github.iamageo:beautiful-dialog:1.0.6'
+        implementation 'com.github.iamageo:beautiful-dialog:1.0.7'
 }
 ```
 
