@@ -3,14 +3,10 @@ package com.iamageo.library
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.ContentValues.TAG
 import android.graphics.Typeface
-import android.os.Build
-import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
-import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintSet
 import com.iamageo.library.BeautifulDialog.Companion.binding
 import com.iamageo.library.databinding.BeautifulDialogBinding
@@ -116,8 +112,16 @@ fun AlertDialog.position(position: BeautifulDialog.POSITIONS): AlertDialog {
                 val marginInPixels = (1000 * density).toInt()
                 params.bottomMargin = marginInPixels
             }
-            BeautifulDialog.POSITIONS.CENTER -> params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE)
-            BeautifulDialog.POSITIONS.BOTTOM -> params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE)
+
+            BeautifulDialog.POSITIONS.CENTER -> params.addRule(
+                RelativeLayout.CENTER_IN_PARENT,
+                RelativeLayout.TRUE
+            )
+
+            BeautifulDialog.POSITIONS.BOTTOM -> params.addRule(
+                RelativeLayout.ALIGN_PARENT_BOTTOM,
+                RelativeLayout.TRUE
+            )
         }
 
         binding.mainLayout.layoutParams = params
