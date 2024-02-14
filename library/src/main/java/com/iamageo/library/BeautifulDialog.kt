@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import com.iamageo.library.BeautifulDialog.Companion.binding
+import com.iamageo.library.Constants.Companion.MARGIN_DP
 import com.iamageo.library.databinding.BeautifulDialogBinding
 
 class BeautifulDialog {
@@ -109,7 +110,7 @@ fun AlertDialog.position(position: BeautifulDialog.POSITIONS): AlertDialog {
             BeautifulDialog.POSITIONS.TOP -> {
                 params.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE)
                 val density = context.resources.displayMetrics.density
-                val marginInPixels = (1000 * density).toInt()
+                val marginInPixels = (MARGIN_DP * density).toInt()
                 params.bottomMargin = marginInPixels
             }
 
