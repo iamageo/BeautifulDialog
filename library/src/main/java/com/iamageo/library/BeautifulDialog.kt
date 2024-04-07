@@ -6,11 +6,10 @@ import android.app.AlertDialog
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.RelativeLayout
 import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.isVisible
 import com.iamageo.library.BeautifulDialog.Companion.binding
+import com.iamageo.library.Constants.Companion.MARGIN_DP
 import com.iamageo.library.databinding.BeautifulDialogBinding
 
 class BeautifulDialog {
@@ -19,7 +18,7 @@ class BeautifulDialog {
      * Positions For Alert Dialog
      * */
     enum class POSITIONS {
-        CENTER, BOTTOM
+        CENTER, BOTTOM, TOP
     }
 
     /***
@@ -93,7 +92,7 @@ fun AlertDialog.background(
  */
 fun AlertDialog.dialogAnimation(
     resId: Int
-) : AlertDialog {
+): AlertDialog {
     binding.dialogAnimation.setAnimation(resId)
     return this
 }
@@ -101,18 +100,37 @@ fun AlertDialog.dialogAnimation(
 /***
  * Positions of Alert Dialog
  * */
-fun AlertDialog.position(
-    position: BeautifulDialog.POSITIONS = BeautifulDialog.POSITIONS.BOTTOM
-): AlertDialog {
-    val layoutParams = binding.mainLayout.layoutParams as RelativeLayout.LayoutParams
-    if (position == BeautifulDialog.POSITIONS.CENTER) {
-        layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE)
-    } else if (position == BeautifulDialog.POSITIONS.BOTTOM) {
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE)
+fun AlertDialog.position(position: BeautifulDialog.POSITIONS): AlertDialog {
+    binding.mainLayout.post {
+        val params = binding.mainLayout.layoutParams as RelativeLayout.LayoutParams
+        params.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0)
+        params.addRule(RelativeLayout.CENTER_IN_PARENT, 0)
+        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0)
+        when (position) {
+            BeautifulDialog.POSITIONS.TOP -> {
+                params.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE)
+                val density = context.resources.displayMetrics.density
+                val marginInPixels = (MARGIN_DP * density).toInt()
+                params.bottomMargin = marginInPixels
+            }
+
+            BeautifulDialog.POSITIONS.CENTER -> params.addRule(
+                RelativeLayout.CENTER_IN_PARENT,
+                RelativeLayout.TRUE
+            )
+
+            BeautifulDialog.POSITIONS.BOTTOM -> params.addRule(
+                RelativeLayout.ALIGN_PARENT_BOTTOM,
+                RelativeLayout.TRUE
+            )
+        }
+
+        binding.mainLayout.layoutParams = params
+        binding.mainLayout.requestLayout()
     }
-    binding.mainLayout.layoutParams = layoutParams
     return this
 }
+
 
 /***
  * Sub Title or Body of Alert Dialog
@@ -147,18 +165,22 @@ fun AlertDialog.type(
         BeautifulDialog.TYPE.SUCCESS -> {
             binding.dialogAnimation.setAnimation(R.raw.success)
         }
+
         BeautifulDialog.TYPE.INFO -> {
             binding.dialogAnimation.setAnimation(R.raw.info)
         }
+
         BeautifulDialog.TYPE.ALERT -> {
-             binding.dialogAnimation.setAnimation(R.raw.alert)
+            binding.dialogAnimation.setAnimation(R.raw.alert)
         }
+
         BeautifulDialog.TYPE.ERROR -> {
             binding.dialogAnimation.setAnimation(R.raw.error)
         }
+
         BeautifulDialog.TYPE.NONE -> {
             binding.dialogAnimation.hide()
-            binding.dialogAnimation.layoutParams.height=0
+            binding.dialogAnimation.layoutParams.height = 0
 
         }
     }
@@ -193,7 +215,7 @@ fun AlertDialog.onPositive(
     binding.yesButton.text = text.trim()
     binding.yesButton.setOnClickListener {
         action?.invoke()
-        if(shouldIDismissOnClick) dismiss()
+        if (shouldIDismissOnClick) dismiss()
     }
     return this
 }
@@ -224,7 +246,7 @@ fun AlertDialog.onNegative(
     }
     binding.noButton.setOnClickListener {
         action?.invoke()
-        if(shouldIDismissOnClick) dismiss()
+        if (shouldIDismissOnClick) dismiss()
     }
     return this
 }
