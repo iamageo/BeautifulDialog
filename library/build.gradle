@@ -5,14 +5,14 @@ plugins {
 }
 
 group = 'com.github.iamageo'
-version = '1.0.4'
+version = '1.0.9'
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 21
-        targetSdk 33
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -40,10 +40,10 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'com.airbnb.android:lottie:6.0.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.airbnb.android:lottie:6.2.0'
 
     testImplementation 'junit:junit:4.13.2'
 
@@ -56,7 +56,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.iamageo'
                 artifactId = 'beautiful-dialog'
-                version = '1.0.6'
+                version = '1.0.9'
             }
         }
     }
