@@ -21,10 +21,10 @@
 
 ## Demonstration
 <p align="center">
-    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/0a45b075-b1f1-48ea-9618-95157146305e" width="25%"/>
-    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/48eab16c-1e7d-4a72-81f8-7f2db87fd65f" width="25%"/>
-    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/422e8da6-9601-4f9e-bd49-e6e0d9d8a5b0" width="25%"/>
-    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/fdf2d920-0d91-422e-92fc-398036f5c3ab" width="25%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/0a45b075-b1f1-48ea-9618-95157146305e" width="20%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/48eab16c-1e7d-4a72-81f8-7f2db87fd65f" width="20%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/422e8da6-9601-4f9e-bd49-e6e0d9d8a5b0" width="20%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/fdf2d920-0d91-422e-92fc-398036f5c3ab" width="20%"/>
 </p>
 
 ## Star history 🌟
@@ -109,8 +109,8 @@ TYPE.ERROR
 TYPE.NONE
 ```
 
-|                                                                    SUCCESS                                                                    |                                                                     INFO                                                                      | ALERT |                                                                     ERROR                                                                     |                                                                      NONE
-|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------:| :---------------------------------------------------------------------------------------------------------------------------------------------:| 
+|SUCCESS|INFO| ALERT |ERROR|NONE|
+|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:| :---------------------------------------------------------------------------------------------------------------------------------------------:| 
 | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/b9354c50-fb29-44a9-af2c-0693b6e1c9ff" align="center" width="100%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/0babdd7c-b4e8-4bdd-850a-dc0c8c512b63" align="center" width="100%"/> |     <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/60638801-e226-4f92-987f-6daa086efe85" align="center" width="100%"/>   | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/04513979-e505-4acd-8c36-4917302d4b59" align="center" width="100%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/fd56d62d-ff54-45e5-8f2c-f3d91ea0c138" align="center" width="100%"/> |
 
 ## Positioning 📱
