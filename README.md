@@ -19,11 +19,12 @@
 </p>
 
 
-## Screenshots
+## Demonstration
 <p align="center">
-<img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" width="30%"/>
-<img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" width="30%"/>
-<img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" width="30%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/0a45b075-b1f1-48ea-9618-95157146305e" width="25%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/48eab16c-1e7d-4a72-81f8-7f2db87fd65f" width="25%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/422e8da6-9601-4f9e-bd49-e6e0d9d8a5b0" width="25%"/>
+    <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/fdf2d920-0d91-422e-92fc-398036f5c3ab" width="25%"/>
 </p>
 
 ## Star history 🌟
@@ -107,23 +108,23 @@ TYPE.ALERT
 TYPE.ERROR
 TYPE.NONE
 ```
-By Default Position is Bottom.
 
-|                                                                    SUCCESS                                                                    |                                                                     INFO                                                                      | ALERT |                                                                     ERROR                                                                     |
-|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------:| 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="70%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633421-653961c1-a77b-4009-945d-09618c6fd772.png" align="center" width="70%"/> |       | <img src="https://user-images.githubusercontent.com/26925002/162633431-38a1a45e-91b7-4a1a-b4ba-686fe440b8b5.png" align="center" width="70%"/> |
+|                                                                    SUCCESS                                                                    |                                                                     INFO                                                                      | ALERT |                                                                     ERROR                                                                     |                                                                      NONE
+|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------:| :---------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/b9354c50-fb29-44a9-af2c-0693b6e1c9ff" align="center" width="100%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/0babdd7c-b4e8-4bdd-850a-dc0c8c512b63" align="center" width="100%"/> |     <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/60638801-e226-4f92-987f-6daa086efe85" align="center" width="100%"/>   | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/04513979-e505-4acd-8c36-4917302d4b59" align="center" width="100%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/fd56d62d-ff54-45e5-8f2c-f3d91ea0c138" align="center" width="100%"/> |
 
 ## Positioning 📱
 We can customize the Position of Dialog.
 ```kotlin
+POSITIONS.TOP
 POSITIONS.CENTER
 POSITIONS.BOTTOM
 ```
-By default, the Position is **Bottom**.
+By default, the Position is **CENTER**.
 
-|                                                                    CENTER                                                                     |                                                                    BOTTOM                                                                     |
-|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:| 
-| <img src="https://user-images.githubusercontent.com/26925002/162633413-8cc80819-5ff8-4258-b60e-5101d058c907.png" align="center" width="50%"/> | <img src="https://user-images.githubusercontent.com/26925002/162633465-7dae6ed4-c638-432e-a823-7276e046546b.png" align="center" width="50%"/> |
+|                                                                    TOP                                                                     |                                                                   CENTER                                                                      |                                                                    BOTTOM   
+|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:| :---------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/8811dcf0-a1de-42b8-9774-914a7874bfb1" align="center" width="50%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/95aaad55-76a2-4f63-b7dd-c046b230f5c1" align="center" width="50%"/> | <img src="https://github.com/iamageo/BeautifulDialog/assets/26925002/3b2b21f2-a62d-44df-9e65-503e022fe5d7" align="center" width="50%"/> |
 
 ## Hacktoberfest 2022
 This project has been submitted for hacktoberfest 2022. [See more here](https://hacktoberfest.com/)
