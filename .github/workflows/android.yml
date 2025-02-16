@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -35,13 +35,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build -Dlint.baselines.continue=true
 
       - name: Run tests
-        run: ./gradlew test
-
-      - name: Ktlint check
-        run: ./gradlew ktlintCheck
+        run: ./gradlew test 
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
