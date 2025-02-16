@@ -9,15 +9,12 @@
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
   <img alt="repo size" src="https://img.shields.io/github/repo-size/iamageo/beautiful-dialog"/>
   <br/>
-  <img alt="Code quality" src="https://www.codefactor.io/repository/github/iamageo/beautifuldialog/badge"/>
-  <img alt="Build" src="https://github.com/iamageo/BeautifulDialog/actions/workflows/android_ci.yml/badge.svg"/>
-  <img alt="Build" src="https://github.com/iamageo/BeautifulDialog/actions/workflows/android_ci_unit_test.yml/badge.svg"/>
-
-  <br/>
     <img alt="forks" src="https://img.shields.io/github/forks/iamageo/beautiful-dialog?style=social"/>
     <img alt="stars" src="https://img.shields.io/github/stars/iamageo/beautiful-dialog?style=social"/>
 </p>
 
+[![Android CI](https://github.com/iamageo/BeautifulDialog/actions/workflows/android.yml/badge.svg)](https://github.com/iamageo/BeautifulDialog/actions/workflows/android.yml)
+[![Android Unit Test](https://github.com/iamageo/BeautifulDialog/actions/workflows/android_unit_test.yml/badge.svg)](https://github.com/iamageo/BeautifulDialog/actions/workflows/android_unit_test.yml)
 
 ## Demonstration
 <p align="center">
