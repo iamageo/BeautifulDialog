@@ -8,6 +8,7 @@ group = 'com.github.iamageo'
 version = '1.0.9'
 
 android {
+    namespace 'com.iamageo.library'
     compileSdk 34
 
     defaultConfig {

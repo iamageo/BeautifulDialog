@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace 'com.iamageo.beautiful_dialog'
     compileSdk 34
 
     defaultConfig {
