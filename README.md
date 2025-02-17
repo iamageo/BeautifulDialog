@@ -15,6 +15,7 @@
 
 [![Android CI](https://github.com/iamageo/BeautifulDialog/actions/workflows/android.yml/badge.svg)](https://github.com/iamageo/BeautifulDialog/actions/workflows/android.yml)
 [![Android Unit Test](https://github.com/iamageo/BeautifulDialog/actions/workflows/android_unit_test.yml/badge.svg)](https://github.com/iamageo/BeautifulDialog/actions/workflows/android_unit_test.yml)
+[![](https://jitpack.io/v/iamageo/BeautifulDialog.svg)](https://jitpack.io/#iamageo/BeautifulDialog)
 
 ## Demonstration
 <p align="center">
