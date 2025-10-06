@@ -10,7 +10,7 @@ core-ktx = "1.17.0"
 appcompat = "1.7.1"
 material = "1.13.0"
 constraintlayout = "2.2.1"
-lottie = "6.6.7"
+lottie = "6.6.10"
 junit4 = "4.13.2"
 
 [libraries]
